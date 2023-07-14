@@ -1,0 +1,505 @@
+@font-face {
+    font-family: 'Manrope'; /*a name to be used later*/
+    src: url('fonts/manrope-bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: inter; /*a name to be used later*/
+    src: url('fonts/inter.ttf'); /*URL to font*/
+}
+
+
+.navig{
+	padding:10px;
+}
+
+.navig .menu_butt{
+	animation: ease-in-out;
+    font-size: 120%;
+    vertical-align: bottom;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    margin-top:10px;
+    position: relative;
+    text-align: center;
+    transition: transform 500ms;
+    font-family: inter;
+    float: right;
+
+	
+}
+
+.navig .menu_butt.main{
+    color: rgb(237,118,14);
+    
+    
+
+	
+}
+.navig .menu_butt:hover{
+	background: rgb(30, 30, 30);
+	border-radius: 25px;
+
+}
+#circle_red{
+    border-radius: 50%;
+    background-color: red;
+
+    position: absolute;
+    filter: blur(100px);
+    z-index: 6;
+}
+
+#circle_yellow{
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    filter: blur(100px);
+    z-index: 6;
+}
+
+#circle_orange{
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    filter: blur(100px);
+    z-index: 6;
+}
+
+body{
+	background: rgb(15, 15, 15);
+  	justify-content: center;
+  	margin: 0;
+  	font-family: "inter";
+}
+
+
+#created_by{
+	z-index:500;
+	color:white;
+	font-family: inter;
+	margin:1%;
+}
+
+
+
+#canvas{
+	margin-left: auto;
+	margin-right: auto;
+	padding:1%;
+	padding-bottom: 5%;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#canvas h1{
+	color: rgb(255, 255, 255);
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0%;
+	font-size: 250%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index:500;
+	
+	font-family: "Manrope";
+}
+.colortext {
+     color: rgb(237,118,14); /* Красный цвет выделения */
+}
+
+#prew{
+	color: rgb(255, 255, 255);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	font-size: 130%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index:500;
+	position: relative;
+	font-family: inter;
+}
+
+#main_down{
+	background-color: rgb(20, 20, 20);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1%;
+	padding: 1%;
+	left: 0;
+	right: 0;
+	position: relative;
+	z-index:500;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
+	
+}
+
+#tg_bot:before {
+content: "\f2c6"; /* добавляем иконку дом */
+font-family: FontAwesome;
+color: #000000;
+margin-right: 10px; 
+}
+
+#tg_bot{
+	margin-top: 3%;
+	padding: 10px;
+	background: rgb(237,118,14);
+	color: rgb(0, 0, 0);
+	font-size: 130%;
+	border-radius: 25px;
+	text-align: center;
+	text-decoration: none;
+	z-index:500;
+	position: relative;
+	font-family: "inter";
+	box-shadow: 10px 11px 22px 19px rgba(0,0,0,0.1);
+
+}
+
+
+.main_info{
+	background:rgba(32, 32, 32);
+	margin-top: 1%;
+	width:98%;
+	border-radius: 10px;
+	margin-bottom: 1%;
+	display: grid;
+	justify-content: center;
+}
+
+.main_info.two{
+	background:rgba(30, 30, 50, 150);
+}
+
+.main_info_text.two{
+	color:rgb(51, 51, 204);
+}
+.main_info img{
+	margin-top: 1%;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main_info_text{
+	padding: 3%;
+	padding-top: 1%;
+	text-align:center;
+	font-family: "inter";
+	color: rgb(239, 68, 68);
+	font-size: 130%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main_info_text.mini{
+	padding-top: 0%;
+	text-align:center;
+	font-family: "inter";
+	color: rgb(255, 255, 255);
+	font-size: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.navig .icon {
+  display: none;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+
+#main_down_a{
+	background-color: rgb(20, 20, 20);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1%;
+	left: 0;
+	right: 0;
+	position: relative;
+	z-index:500;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
+
+	
+}
+#main_down_a h1{
+	margin-top:0%;
+	color: white;
+	margin-bottom: 1%;
+	text-align: center;
+	font-family: "Manrope";
+}
+#help_butt_bot{
+	animation: ease-in-out;
+	transition: transform 500ms;
+	margin-top: 1.5%;
+	padding: 10px;
+	background: rgb(237,118,14);
+	color: rgb(0, 0, 0);
+	font-size: 130%;
+	border-radius: 25px;
+	text-align: center;
+	text-decoration: none;
+	z-index:500;
+	position: relative;
+	font-family: "inter";
+
+}
+
+#help_butt_bot_ds{
+	animation: ease-in-out;
+	transition: transform 500ms;
+	margin-top: 2%;
+	padding: 10px;
+	background: rgb(237,118,14);
+	color: rgb(0, 0, 0);
+	font-size: 130%;
+	border-radius: 25px;
+	text-align: center;
+	text-decoration: none;
+	z-index:500;
+	position: relative;
+	font-family: "inter";
+
+}
+#help_butt_bot_info{
+	color:white;
+	font-family: "inter";
+	text-align: center;
+}
+#help_butt_bot:before {
+	content: "\f2c6"; /* добавляем иконку дом */
+	font-family: FontAwesome;
+	color: #000000;
+	margin-right: 10px; 
+}
+
+
+#page_404{
+	background-color: rgb(20, 20, 20);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1%;
+	left: 0;
+	right: 0;
+	position: relative;
+	z-index:500;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
+
+	
+}
+
+
+
+#page_404 h1{
+	margin-top:0%;
+	color: white;
+	margin-bottom: 1%;
+	text-align: center;
+	font-family: "Manrope";
+}
+#page_404 a{
+	color: white;
+	margin-bottom: 1%;
+	text-align: center;
+	font-family: inter;
+	font-size: 110%;
+}
+
+
+#changelog{
+	background-color: rgb(20, 20, 20);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1%;
+	left: 0;
+	right: 0;
+	position: relative;
+	z-index:500;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
+
+	
+}
+
+
+
+#changelog h1{
+	margin-top:0%;
+	color: white;
+	margin-bottom: 1%;
+	text-align: center;
+	font-family: "Manrope";
+}
+#changelog a{
+	color: white;
+	margin-bottom: 1%;
+	font-family: inter;
+	font-size: 90%;
+	margin-left: 2%;
+}
+
+
+#about_text{
+	color:white;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 120%;
+}
+#about_img{
+	width:50%;
+}
+
+footer{
+	display: grid;
+}
+
+footer a{
+	color:white;
+	margin:1%;
+	font-size: 80%;
+}
+@media(max-width: 425px){
+
+	#page_404 h1{
+		margin-top:0%;
+		color: white;
+		margin-bottom: 1%;
+		text-align: center;
+		font-family: "Manrope";
+		font-size: 120%;
+	}
+	#page_404 a{
+		color: white;
+		margin-bottom: 1%;
+		text-align: center;
+		font-family: inter;
+		font-size: 90%;
+	}
+	.navig img{
+		width:12%;
+	}
+	footer a{
+		
+		font-size: 70%;
+	}
+	#canvas h1{
+		color: rgb(255, 255, 255);
+		margin-top: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0%;
+		font-size: 140%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		z-index:500;
+		
+		font-family: "Manrope";
+	}
+
+	#prew{
+		color: rgb(255, 255, 255);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1%;
+		font-size: 80%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		z-index:500;
+		position: relative;
+		font-family: inter;
+	}
+	.navig .menu_butt{
+
+		animation: ease-in-out;
+		font-size: 100%;
+		vertical-align: bottom;
+		margin-left: 0.5%;
+		margin-right:0.5%;
+		color: rgb(255, 255, 255);
+		padding: 1%;
+		text-decoration: none;
+		margin-bottom: 2%;
+		display: inline-block;
+	   	text-align:center; 
+	   	transition: transform 500ms;
+
+	   	font-family: inter;
+	}
+	
+	#tg_bot{
+	margin-top: 3%;
+	padding: 8px;
+	font-size: 100%;
+
+}
+
+
+	.navig a:not(:first-child) {
+	    display: none;
+	  }
+	.navig a.icon {
+	    float: right;
+	    display: block;
+	    background-color: rgb(30, 30, 30);
+	    border-radius: 25px;
+	    padding: 2%;
+	    color: white;
+	    text-decoration: none;
+
+
+	  }
+
+	 .navig.responsive {position: relative;}
+
+	  .navig.responsive a.menu_butt {
+	    float: none;
+	    display: block;
+	    text-align: right;
+
+	  }
+
+	 #help_butt_bot{
+	 	font-size: 100%;
+	 }
+	 #help_butt_bot_info{
+	 	font-size: 80%;
+	 }
+
+	#main_down_a h1{
+		font-size: 150%;
+		color: white;
+		margin-bottom: 1%;
+	}
+
+	#help_butt_bot_ds{
+		font-size: 100%;
+	}
+
+}
