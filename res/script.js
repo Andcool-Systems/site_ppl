@@ -57,7 +57,7 @@ class Circle{
 		}
 
 		  // Если объект касается верхнего или нижнего края экрана - меняем направление по оси Y
-		if (this.posY > this.cnavas_width || this.posY < 0) {
+		if (this.posY > this.cnavas_width - 50 || this.posY < 0) {
 
 		  this.speedY = -this.speedY;
 
