@@ -381,6 +381,7 @@ footer{
 footer a{
 	color:white;
 	margin:1%;
+	margin-bottom: 3%;
 	font-size: 80%;
 }
 @media(max-width: 425px){
