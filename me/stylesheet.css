@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Manrope'; /*a name to be used later*/
+    src: url('fonts/manrope-bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: inter; /*a name to be used later*/
+    src: url('fonts/inter.ttf'); /*URL to font*/
+}
+
+
+.navig{
+	padding:10px;
+}
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;}
+body{
+	background: rgb(15, 15, 15);
+  	justify-content: center;
+  	margin: 0;
+  	font-family: "inter";
+}
+.navig{
+	padding:10px;
+}
+.navig .icon {
+    display: none;
+    margin-top: 2%;
+  }
+
+.navig .menu_butt{
+	animation: ease-in-out;
+    font-size: 120%;
+    vertical-align: bottom;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    margin-top:10px;
+    position: relative;
+    text-align: center;
+    transition: transform 500ms;
+    font-family: inter;
+    float: right;
+
+	
+}
+
+
+.navig .menu_butt:hover{
+	background: rgb(15, 15, 15);
+	border-radius: 25px;
+}
+
+#login{
+	background-color: rgb(15, 15, 15);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 1%;
+	left: 0;
+	right: 0;
+	position: relative;
+	z-index:500;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
+
+	
+}
+
+
+
+#login h1{
+	margin-top:0%;
+	color: white;
+	margin-bottom: 0.5%;
+	text-align: center;
+	font-family: "Manrope";
+}
+#login a{
+	color: white;
+	margin-bottom: 1%;
+	font-family: inter;
+	font-size: 90%;
+    margin-top: 1%;
+
+}
+
+#login h4{
+	color: white;
+	margin-bottom: 1%;
+	font-family: inter;
+	font-size: 90%;
+    margin-top: 1%;
+
+}
+
+#login h3{
+	color: white;
+	margin-bottom: 1%;
+	font-family: inter;
+	font-size: 120%;
+    margin: 0%;
+    background-color: rgb(43, 43, 43);
+    padding: 0.7%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media(max-width: 425px){
+	
+	.navig img{
+		width:12%;
+	}
+	
+	
+	.navig .menu_butt{
+
+		animation: ease-in-out;
+		font-size: 100%;
+		vertical-align: bottom;
+		margin-left: 0.5%;
+		margin-right:0.5%;
+		color: rgb(255, 255, 255);
+		padding: 1%;
+		text-decoration: none;
+		margin-bottom: 2%;
+		display: inline-block;
+	   	text-align:center; 
+	   	transition: transform 500ms;
+
+	   	font-family: inter;
+	}
+	
+	
+
+
+	.navig a:not(:first-child) {
+	    display: none;
+	  }
+	.navig a.icon {
+	    float: right;
+	    display: block;
+	    background-color: rgb(30, 30, 30);
+	    border-radius: 25px;
+	    padding: 2%;
+	    color: white;
+	    text-decoration: none;
+
+
+	  }
+
+	 .navig.responsive {position: relative;}
+
+	  .navig.responsive a.menu_butt {
+	    float: none;
+	    display: block;
+	    text-align: right;
+
+	  }
+
+    #login h4{
+        color: white;
+        margin-bottom: 1%;
+        font-family: inter;
+        font-size: 85%;
+        margin-top: 1%;
+    
+    }
+    
+    #login h3{
+        color: white;
+        margin-bottom: 1%;
+        font-family: inter;
+        font-size: 100%;
+        margin: 0%;
+        background-color: rgb(43, 43, 43);
+        padding: 0.9%;
+        border-radius: 10px;
+    }
+
+}

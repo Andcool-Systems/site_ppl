@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<meta charset="utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<title>Личный кабинет</title>
+ 		<link rel="icon" href="http://pplbandagebot.ru/res/icons/favicon.ico" type="image/x-icon">
+ 		<link rel="stylesheet" href="stylesheet.css">
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 		<script src="script.js"></script>
+
+		 <html prefix="og: http://ogp.me/ns#">
+			<meta property="og:title" content="Повязка Пепеленда для всех">
+			<meta property="og:site_name" content="pplbandagebot.ru">
+			<meta property="og:url" content="https://pplbandagebot.ru">
+			<meta property="og:description" content="Личный кабинет">
+			<meta property="og:image" content="http://pplbandagebot.ru/res/prew.png">
+		</html>
+	</head>
+	<body>
+		
+		<header>
+			<nav class="navig" id="myTopnav">
+				<a href="http://pplbandagebot.ru" class="logo"><img src="http://pplbandagebot.ru/res/icons/logo.png"></a>
+				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+				<a class="menu_butt" href="http://pplbandagebot.ru/help.html">Техподдержка</a>
+				<a class="menu_butt" href="http://pplbandagebot.ru/about.html">О нас</a>
+				<a class="menu_butt" href="http://pplbandagebot.ru">Главная</a>
+				
+				
+			</nav>
+		</header>
+		
+		
+		<div id="login">
+			<h1>Войти:</h1>
+            <h4>Для входа отправьте это <a href="https://t.me/pplBandageBot" target="_blank">боту</a> (Нажмите для копирования):</h4>
+
+            <h3 id="token" onclick="copya()">None</h3>
+            
+
+            <h4>После отправки сообщения боту нажмите на кнопку ниже:</h4>
+            <h3 onclick="check()">Войти</h3>
+
+			
+		</div>
+		<script>
+			//var api = "http://192.168.0.104:8080"
+			var api = "https://api.pplbandagebot.ru"
+			// возвращает куки с указанным name,
+			// или undefined, если ничего не найдено
+			function getCookie(name) {
+				const value = `; ${document.cookie}`;
+				const parts = value.split(`; ${name}=`);
+				if (parts.length === 2) return parts.pop().split(';').shift();
+			}
+			
+			console.log(getCookie("user"));
+			const url = api + '/login/'+ getCookie("user")
+				
+
+				fetch(url, {method: "GET"})
+				.then(res => res.json())
+				.then(data => {
+					obj = data;
+				})
+				.then(() => {
+					console.log(obj);
+				
+					if (obj["message"] == "Success"){
+						var logi = document.getElementById("login");
+						logi.style.display = "none";
+						alert("Logged");
+						
+					}
+				});
+
+
+			function uuidv4() {
+				return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+					(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+				);
+				}
+			
+			var uuid = uuidv4();
+			const changeText = document.querySelector("#token");
+			changeText.textContent = "/login " + uuid;
+
+			function copya() {
+				/* Get the text field */
+				var texta = document.querySelector("#token");
+
+				navigator.clipboard.writeText(texta.textContent);
+
+				/* Alert the copied text */
+				//alert("Скопированно: " + texta.textContent);
+}               function check(){
+				const url = api + '/login/'+ uuid
+				
+
+				fetch(url, {method: "GET"})
+				.then(res => res.json())
+				.then(data => {
+					obj = data;
+				})
+				.then(() => {
+					console.log(obj);
+					if(obj["message"] == "User not found"){
+						alert("Ваша сессия была завершена, пожалуйста отправьте новое сообщение авторизации боту");
+					}
+					else if (obj["message"] == "Success"){
+						document.cookie = "user=" + obj["token"];
+						var logi = document.getElementById("login");
+						logi.style.display = "none";
+						alert("Logged");
+					}
+				});
+				
+			}
+		</script>
+
+
+	</body>	
+</html>

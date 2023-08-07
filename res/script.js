@@ -1,3 +1,4 @@
+/*
 const url = 'https://api.pplbandagebot.ru/info/1197005557'
     fetch(url, {
 		method: "GET"
@@ -8,6 +9,9 @@ const url = 'https://api.pplbandagebot.ru/info/1197005557'
         console.log(json);
         //document.getElementById("demo").innerHTML = JSON.stringify(json)
     })
+	*/
+
+
 // использование Math.round() даст неравномерное распределение!
 function getRandomInt(min, max)
 {
