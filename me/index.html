@@ -44,6 +44,11 @@
 
 			
 		</div>
+
+		<div id="me">
+			<h1>Разработка личного кабинета остановлена</h1>
+			<a href="http://pplbandagebot.ru">Главная страница</a>
+		</div>
 		<script>
 			function myFunction() {
 				var x = document.getElementById("myTopnav");
@@ -77,8 +82,9 @@
 				
 					if (obj["message"] == "Success"){
 						var logi = document.getElementById("login");
+						var mee = document.getElementById("me");
 						logi.style.display = "none";
-						alert("Logged");
+						me.style.display = "flex";
 						
 					}
 				});
@@ -119,8 +125,9 @@
 					else if (obj["message"] == "Success"){
 						document.cookie = "user=" + obj["token"];
 						var logi = document.getElementById("login");
+						var mee = document.getElementById("me");
 						logi.style.display = "none";
-						alert("Logged");
+						me.style.display = "flex";
 					}
 				});
 				
