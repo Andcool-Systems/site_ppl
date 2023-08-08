@@ -40,11 +40,19 @@
             
 
             <h4>После отправки сообщения боту нажмите на кнопку ниже:</h4>
-            <h3 onclick="check()">Войти</h3>
+            <h3 onclick="check()" id="logbtn">Войти</h3>
 
 			
 		</div>
 		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "navig") {
+					x.className += " responsive";
+				} else {
+					x.className = "navig";
+				}
+			}
 			//var api = "http://192.168.0.104:8080"
 			var api = "https://api.pplbandagebot.ru"
 			// возвращает куки с указанным name,
