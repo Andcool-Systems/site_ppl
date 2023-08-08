@@ -78,7 +78,7 @@
 				const parts = value.split(`; ${name}=`);
 				if (parts.length === 2) return parts.pop().split(';').shift();
 			}
-			if (getCookie("user") != "undefined"){
+			if (String(getCookie("user")) != "undefined"){
 				const url = api + '/login/'+ getCookie("user")
 					
 
