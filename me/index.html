@@ -4,7 +4,7 @@
  		<meta charset="utf-8">
  		<meta name="viewport" content="width=device-width, initial-scale=1">
  		<title>Личный кабинет</title>
- 		<link rel="icon" href="http://pplbandagebot.ru/res/icons/favicon.ico" type="image/x-icon">
+ 		<link crossorigin="anonymous" rel="icon" href="http://pplbandagebot.ru/res/icons/favicon.ico" type="image/x-icon">
  		<link rel="stylesheet" href="stylesheetMe.css">
  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  		<script src="script.js"></script>
@@ -41,9 +41,6 @@
 
             <h4>После отправки сообщения боту нажмите на кнопку ниже:</h4>
             <h3 onclick="check()" id="logbtn">Войти</h3>
-			
-			
-			
 		</div>
 
 		<div id="me">
@@ -51,7 +48,7 @@
 			<a href="http://pplbandagebot.ru">Главная страница</a>
 			<hr>
 			<div>
-				<img id="ItemPreview" src="noAvatar.png" alt="Avatar">
+				<img id="ItemPreview" src="noAvatar.gif" alt="Avatar">
 				<h1 id="name">Username</h1>
 
 				
@@ -60,7 +57,6 @@
 			
 		</div>
 		<script>
-			
 			function myFunction() {
 				var x = document.getElementById("myTopnav");
 				if (x.className === "navig") {
@@ -71,8 +67,6 @@
 			}
 			//var api = "http://192.168.0.104:8080"
 			var api = "https://api.pplbandagebot.ru"
-			// возвращает куки с указанным name,
-			// или undefined, если ничего не найдено
 			function getCookie(name) {
 				const value = `; ${document.cookie}`;
 				const parts = value.split(`; ${name}=`);
@@ -112,13 +106,9 @@
 			changeText.textContent = "/login " + uuid;
 
 			function copya() {
-				/* Get the text field */
 				var texta = document.querySelector("#token");
-
 				navigator.clipboard.writeText(texta.textContent);
 
-				/* Alert the copied text */
-				//alert("Скопированно: " + texta.textContent);
 }               function check(){
 				const url = api + '/login/'+ uuid
 				
