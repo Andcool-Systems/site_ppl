@@ -15,7 +15,8 @@ function data(uuid_){
                 document.getElementById("ItemPreview").src = "noAvatar.png"
             }
 
-
+            const balance = document.querySelector("#balance");
+			balance.textContent = obj["balance"] + "₽ +";
 
             if(obj["first_name"] != "None"){
                 var first = obj["first_name"]

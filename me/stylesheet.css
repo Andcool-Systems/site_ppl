@@ -124,7 +124,7 @@ body{
 	text-align: center;
 	font-family: "Manrope";
 }
-#me a{
+#me .a{
 	color: rgb(250, 169, 19);
 	margin-bottom: 1%;
 	font-family: "inter";
@@ -150,6 +150,7 @@ body{
 	flex-direction: column;
     align-items: center;
 	display: none;
+	
 
 	
 }
@@ -158,11 +159,12 @@ body{
 	background-color: rgb(15, 15, 15);
 	display:flex;
 	align-items: center;
+	justify-content: center;
 	
 }
 
 #name{
-	margin-left:2%;
+	margin-left:5%;
 	white-space:nowrap;
 }
 
@@ -170,6 +172,7 @@ body{
 	border-radius: 50%;
 	width:100px;
 	height: 100px;
+	
 }
 
 #logout{
@@ -184,8 +187,18 @@ body{
 	border: 1px solid rgb(105, 105, 105);
 	margin-bottom: 1%;
 }
-
-
+#balance{
+	margin-left: 5%;
+	color: white;
+	white-space:nowrap;
+	font-family: "inter";
+	font-size: 130%;
+    margin-top: 1%;
+	text-decoration: none;
+	background-color: rgb(43, 43, 43);
+    padding: 3%;
+    border-radius: 30px;
+}
 @media(max-width: 425px){
 	
 	.navig img{
@@ -275,7 +288,7 @@ body{
         margin-top: 1%;
 		margin-left: 1%;
 		margin-right: 1%;
-		padding: 1%;
+		padding: 2%;
     
     }
 
@@ -283,7 +296,14 @@ body{
 		width:40px;
 		height: 40px;
 	}
-    
+    #balance{
+		font-size: 80%;
+		margin-left:5%;
+	}
+
+	#me .a{
+		padding: 2%;
+	}
 
 
 }
