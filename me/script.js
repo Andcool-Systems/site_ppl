@@ -17,24 +17,8 @@ function data(uuid_){
 
             const balance = document.querySelector("#balance");
 			balance.textContent = obj["balance"] + "₽ +";
-
-            if(obj["first_name"] != "None"){
-                var first = obj["first_name"]
-            }else{
-                var first = ""
-            }
-
-            if(first != ""){var kast_a = " "}
-            else{var kast_a = ""}
-
-			if(obj["last_name"] != "None"){
-                var last = kast_a + obj["last_name"]
-            }else{
-                var last = ""
-            }
-			var name = first + last
-            const names = document.querySelector("#name");
-			names.textContent = name;
+            
+			names.textContent = obj["name"];
         }
     });
 }
