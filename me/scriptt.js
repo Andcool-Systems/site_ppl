@@ -19,7 +19,7 @@ function data(uuid_){
             balance.textContent = obj["balance"] + "₽ +";
 
             const names = document.querySelector("#name");
-            names.textContent = obj["name"];
+            names.textContent = obj["name"] + obj["badge"];
         }
     });
 }
