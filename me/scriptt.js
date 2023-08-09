@@ -18,6 +18,7 @@ function data(uuid_){
             const balance = document.querySelector("#balance");
             balance.textContent = obj["balance"] + "₽ +";
 
+            const names = document.querySelector("#name");
             names.textContent = obj["name"];
         }
     });
