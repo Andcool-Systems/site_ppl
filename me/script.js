@@ -9,7 +9,14 @@ function data(uuid_){
     })
     .then(() => {
         if (obj["message"] == "Success"){
-            document.getElementById("ItemPreview").src = "data:image/png;base64," + String(obj["data"]);
+            if(String(obj["data"]) != "None"){
+                document.getElementById("ItemPreview").src = "data:image/png;base64," + String(obj["data"]);
+            }else{
+                document.getElementById("ItemPreview").src = "noAvatar.png"
+            }
+
+
+
             if(obj["first_name"] != "None"){
                 var first = obj["first_name"]
             }else{
