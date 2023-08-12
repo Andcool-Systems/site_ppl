@@ -1,8 +1,11 @@
 function data(uuid_){
-    const url = api + '/load/'+ uuid_
+    const url = api + '/load';
     
 
-    fetch(url, {method: "GET"})
+    fetch(url, {method: "POST",
+				body: JSON.stringify({ "oauth-token": uuid_}),
+				headers: {"Content-type": "application/json; charset=UTF-8"}
+	})
     .then(res => res.json())
     .then(data => {
         obj = data;
