@@ -8,7 +8,7 @@ function data(uuid_){
         obj = data;
     })
     .then(() => {
-        if (obj["message"] == "Success"){
+        if (obj["status"] == "success"){
             if(String(obj["data"]) != "None"){
                 document.getElementById("ItemPreview").src = "data:image/png;base64," + String(obj["data"]);
             }else{
@@ -38,7 +38,7 @@ function logout(){
         obj = data;
     })
     .then(() => {
-        if (obj["message"] == "Success"){
+        if (obj["status"] == "success"){
             document.cookie = "user=" + "undefined";
             location.reload()
         }

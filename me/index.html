@@ -67,25 +67,28 @@
 					x.className = "navig";
 				}
 			}
-			//var api = "http://192.168.0.104:8080"
-			var api = "https://api.pplbandagebot.ru"
+			var api = "http://192.168.0.107:8080"
+			//var api = "https://api.pplbandagebot.ru"
 			function getCookie(name) {
 				const value = `; ${document.cookie}`;
 				const parts = value.split(`; ${name}=`);
 				if (parts.length === 2) return parts.pop().split(';').shift();
 			}
 			if (String(getCookie("user")) != "undefined"){
-				const url = api + '/login/'+ getCookie("user")
+				const url = api + '/login'
 					
 
-					fetch(url, {method: "GET"})
+					fetch(url, {method: "POST",
+						body: JSON.stringify({ "oauth-token": getCookie("user")}),
+						headers: {"Content-type": "application/json; charset=UTF-8"}
+					})
 					.then(res => res.json())
 					.then(data => {
 						obj = data;
 					})
 					.then(() => {
 					
-						if (obj["message"] == "Success"){
+						if (obj["status"] == "success"){
 							var logi = document.getElementById("login");
 							var mee = document.getElementById("me");
 							logi.style.display = "none";
@@ -112,10 +115,13 @@
 				navigator.clipboard.writeText(texta.textContent);
 
 }               function check(){
-				const url = api + '/login/'+ uuid
+				const url = api + '/login'
 				
 
-				fetch(url, {method: "GET"})
+				fetch(url, {method: "POST",
+						body: JSON.stringify({"oauth-token": uuid}),
+						headers: {"Content-type": "application/json; charset=UTF-8"}
+					})
 				.then(res => res.json())
 				.then(data => {
 					obj = data;
@@ -125,7 +131,7 @@
 					if(obj["message"] == "User not found"){
 						alert("Ваша сессия была завершена, пожалуйста отправьте новое сообщение авторизации боту");
 					}
-					else if (obj["message"] == "Success"){
+					else if (obj["status"] == "success"){
 						document.cookie = "user=" + obj["token"];
 						var logi = document.getElementById("login");
 						var mee = document.getElementById("me");
