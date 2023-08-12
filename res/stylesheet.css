@@ -196,6 +196,10 @@ margin-right: 10px;
 	background:rgba(30, 30, 50, 150);
 }
 
+.main_info_text.three{
+	color:rgba(71, 167, 106);
+}
+
 .main_info_text.two{
 	color:rgb(51, 51, 204);
 }
@@ -214,9 +218,10 @@ margin-right: 10px;
 	font-size: 130%;
 	margin-left: auto;
 	margin-right: auto;
+	white-space: nowrap;
 }
 
-.main_info_text.mini{
+.main_info_text_mini{
 	padding-top: 0%;
 	text-align:center;
 	font-family: "inter";
@@ -224,6 +229,7 @@ margin-right: 10px;
 	font-size: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 3%;
 }
 .navig .icon {
   display: none;
@@ -526,6 +532,14 @@ footer a{
 	
 	#circle_orange{
 		filter: blur(50px);
+	}
+
+	.main_info_text_mini{
+
+		font-size: 85%;
+		margin-left: 3%;
+		margin-right: 3%;
+		
 	}
 
 }
