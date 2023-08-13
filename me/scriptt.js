@@ -23,6 +23,12 @@ function data(uuid_){
 
             const names = document.querySelector("#name");
             names.textContent = obj["name"] + obj["badge"];
+            
+            if (obj["username"] != "None"){
+                const usernames = document.querySelector("#username");
+                usernames.textContent = "@" + obj["username"];
+                usernames.href = "https://t.me/" + obj["username"];
+            }
         }
     });
 }

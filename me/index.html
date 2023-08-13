@@ -48,9 +48,12 @@
 			<h1>Разработка личного кабинета остановлена</h1>
 			<a href="http://pplbandagebot.ru" class="a">Главная страница</a>
 			<hr>
-			<div>
+			<div id="main">
 				<img id="ItemPreview" src="noAvatar.gif" alt="Avatar">
-				<h1 id="name">Username</h1>
+				<div id="names">
+					<h1 id="name">Username</h1>
+					<a id="username"></a>
+				</div>
 				<a href="https://www.donationalerts.com/r/andcool_systems" id="balance" target="_blank">0₽ +</a>
 
 				
@@ -67,8 +70,8 @@
 					x.className = "navig";
 				}
 			}
-			//var api = "http://192.168.0.107:8080"
-			var api = "https://api.pplbandagebot.ru"
+			var api = "http://192.168.0.107:8080"
+			//var api = "https://api.pplbandagebot.ru"
 			function getCookie(name) {
 				const value = `; ${document.cookie}`;
 				const parts = value.split(`; ${name}=`);
