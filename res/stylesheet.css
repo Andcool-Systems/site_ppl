@@ -523,15 +523,15 @@ footer a{
 	}
 
 	#circle_red{
-		filter: blur(50px);
+		filter: blur(70px);
 	}
 	
 	#circle_yellow{
-		filter: blur(50px);
+		filter: blur(70px);
 	}
 	
 	#circle_orange{
-		filter: blur(50px);
+		filter: blur(70px);
 	}
 
 	.main_info_text_mini{
