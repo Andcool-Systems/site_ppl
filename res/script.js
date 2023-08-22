@@ -42,7 +42,7 @@ class Circle{
 		while (this.speedX < 0.1 & this.speedX > -0.1){this.speedX = getRandomInt(-5, 5) / 10;}
 		while (this.speedY < 0.1 & this.speedY > -0.1){this.speedY = getRandomInt(-5, 5) / 10;}
 		this.size = 20;
-		this.targetSize = getRandomInt(10, 30);
+		this.targetSize = getRandomInt(10, 15);
 		this.last_width = 0;
 		this.last_set = 1;
 	}
@@ -62,7 +62,7 @@ class Circle{
 		this.size += this.size < this.targetSize ? 0.001 : -0.001;
 
 		if (this.size < this.targetSize + 3 & this.size > this.targetSize - 3){
-			this.targetSize = getRandomInt(10, 30);
+			this.targetSize = getRandomInt(10, 15);
 		}
 
 		  // Если объект касается правого или левого края экрана - меняем направление по оси X
@@ -84,6 +84,7 @@ class Circle{
 		circle.style.width = (windowWidth / 100) * this.size + 'px';
 		circle.style.height = (windowWidth / 100) * this.size + 'px';
 		this.last_width = cnavas_width;
+
 	}
 }
 if(page == "index.html" || page == ""){
