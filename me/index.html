@@ -18,7 +18,7 @@
 		</html>
 	</head>
 	<body>
-		
+		<div id="snackbar">Скопировано!</div>
 		<header>
 			<nav class="navig" id="myTopnav">
 				<a href="http://pplbandagebot.ru" class="logo"><img src="logo.png"></a>
@@ -34,6 +34,7 @@
 		
 		
 		<div id="login">
+			
 			<h1>Войти:</h1>
             <h4>Для входа отправьте это <a href="https://t.me/pplBandageBot" target="_blank">боту</a> (Нажмите для копирования):</h4>
 
@@ -117,7 +118,17 @@
 				var texta = document.querySelector("#token");
 				navigator.clipboard.writeText(texta.textContent);
 
-}               function check(){
+				// Get the snackbar DIV
+				var x = document.getElementById("snackbar");
+
+				// Add the "show" class to DIV
+				x.className = "show";
+
+				// After 3 seconds, remove the show class from DIV
+				setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+			}               
+				function check(){
 				const url = api + '/login'
 				
 
