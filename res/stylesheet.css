@@ -108,11 +108,12 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1%;
-	padding-bottom: 5%; height: 23vh;
+	padding-bottom: 5%; height: 50vh;
 	flex-direction: column;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	
 }
 
 #canvas h1{
@@ -122,7 +123,7 @@ body{
 	right: 0;
 	text-align: center;
 	z-index:500;
-	
+	margin-bottom: 0%;
 	font-family: "Manrope";
 }
 .colortext {
@@ -169,7 +170,7 @@ margin-right: 10px;
 	margin-top: 3%;
 	padding: 10px;
 	background: rgb(237,118,14);
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 	font-size: 130%;
 	border-radius: 25px;
 	text-align: center;
